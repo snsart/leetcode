@@ -14,7 +14,7 @@ Explanation: From left to right, it reads -121. From right to left, it becomes 1
 ```
 
 ### 大意
-判断一个整数是否时回文
+判断一个整数是否是回文
 
 ### 思路
 1. 排除一定不为回文的情况，比如负数,被10整除的数
