@@ -19,3 +19,4 @@ A solution set is:
 给定一个数组和target，从数组中找出所有四个数之和为target的四元组
 
 ### 思路
+参考0015-3Sum，只是多了一层循环
