@@ -14,7 +14,7 @@ var combinationSum = function(candidates, target) {
     return arr;
 };
 
-/* 从candidates中找出从索引start开始的n个数，其和为target */
+/* 在candidates中找出从索引start开始的n个数，其和为target */
 
 function findCombination(candidates,start,n,target){
     let arr=[];

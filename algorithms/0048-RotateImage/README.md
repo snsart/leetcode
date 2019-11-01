@@ -51,6 +51,6 @@ rotate the input matrix in-place such that it becomes:
 从外至内依次遍历每个元素，内层每次循环会处理4个数字，如下图：a->b->c->d->a<br>
 转换规则:m[i][j]=m[n-1-j][i];<br>
 
-![img](./img.jpg)
+![img](https://github.com/snsart/leetcode/blob/master/algorithms/0048-RotateImage/img.jpg?raw=true)
 
 

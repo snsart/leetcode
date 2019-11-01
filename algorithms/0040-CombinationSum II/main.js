@@ -18,7 +18,7 @@ var backtrack=function(candidates,target,results,path,index){
         return;
     }
     for(let i=index;i<candidates.length;i++){
-        if(i>index&&candidates[i]==candidates[i-1]) {continue;}//忽略相同的路径
+        if(i>index&&candidates[i]==candidates[i-1]) {continue;}//依次把数组中的每个数字作为路径头，若两个路径头一样说明路径重叠
         path.push(candidates[i]);
         backtrack(candidates,target-candidates[i],results,path,i+1);
         path.pop();
