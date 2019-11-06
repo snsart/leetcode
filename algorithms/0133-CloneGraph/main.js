@@ -42,7 +42,9 @@ var copy=function(map,node){
     }
 }
 
+
 /* 更好的写法 */
+
 const cloneGraph2 = (node, cloned=new Map()) => {
     if (!cloned.has(node)) {
       const clone = new Node(node.val);
