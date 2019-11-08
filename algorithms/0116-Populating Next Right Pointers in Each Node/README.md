@@ -27,7 +27,7 @@ You may only use constant extra space.
 Recursive approach is fine, implicit stack space does not count as extra space for this problem.
 
 ### 大意
-为满二叉树添加next指针，next执行每一层的相邻结点
+为满二叉树添加next指针，next指向每一层的相邻结点
 
 ### 思路
 定义两个指针，一个指向当前处理的层，一个指向当前层正在处理的结点。类似于访问二维数组的下标，一个指向行，一个指向当前行的某一列。
