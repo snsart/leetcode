@@ -24,7 +24,8 @@ Surrounded regions shouldn’t be on the border, which means that any 'O' on the
 给定一个由X和O组成的棋盘，把所有被X包围的区域中的O都改为X
 
 ### 思路
-深度优先遍历
+深度优先遍历:从边往里搜索，通过边上任意一点都无法到达的地方是被X包围的区域
+
 
 
 
