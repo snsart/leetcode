@@ -26,16 +26,18 @@ var findOrder = function(numCourses, prerequisites) {
 };
 
 function dfs(label,map,finish,result){
-    if(!map.has(label)){
-        finish[label]="black";
-        result.push(label);
-        return false;
-    }
+   
     
     if(finish[label]=="gray"){
         return true;
     }
     if(finish[label]=="black"){
+        return false;
+    }
+    
+    if(!map.has(label)){
+        finish[label]="black";
+        result.push(label);
         return false;
     }
     
