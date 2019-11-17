@@ -10,37 +10,34 @@ var findItinerary = function(tickets) {
     
     for(let i=0;i<tickets.length;i++){
         let key=tickets[i][0];
-        let value=tickets[i][1];
+        let value=tickets[i];
         if(map.has(key)){
             map.get(key).push(value);
         }else{
             map.set(key,[value]);
         }
-        pathSign.set(key+value,"white");
+        pathSign.set(value,"white");
     }
-    arr.push("JFK");
     dfs("JFK",pathSign,map,arr);
-    return arr;
+    return arr.reduce((total,ele)=>{
+       return [...total,ele[1]]; 
+    },[arr[0][0]]);
 };
 
 function dfs(from,pathSign,map,arr){
     if(map.has(from)){
-        for(let to of map.get(from)){
-            if(pathSign.get(from+to)=="white"){
-                arr.push(to);
-                pathSign.set(from+to,"black");
-                dfs(to,pathSign,map,arr);
+        for(let ticket of map.get(from)){
+            if(pathSign.get(ticket)=="white"){
+                arr.push(ticket);
+                pathSign.set(ticket,"black");
+                dfs(ticket[1],pathSign,map,arr);
             }
         }
     }
-    console.log(arr);
-    if(arr.length==pathSign.size+1){
+    if(arr.length==pathSign.size){
         return
     }else{
-        let to=arr.pop();
-        let from=arr[arr.length-1];
-        if(pathSign.has(from+to)){
-            pathSign.set(from+to,"white");
-        }
+        let ticket=arr.pop();
+        pathSign.set(ticket,"white");
     }
 }
