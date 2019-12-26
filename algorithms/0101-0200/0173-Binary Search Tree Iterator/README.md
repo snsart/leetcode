@@ -27,4 +27,4 @@ You may assume that next() call will always be valid, that is, there will be at 
 实现一个迭代器，next()返回一棵二叉树中的最小值
 
 ### 思路
-
+定义一个list数组，按中序遍历存储二叉树中所有数据，对list实现迭代器。
